@@ -1,0 +1,45 @@
+This is Net::Bonjour, a set of perl modules to utilize DNS for service
+discovery.  This method of service discovery is branded as Bonjour by 
+Apple Computer.  More information can be found at:
+
+http://www.zeroconf.org/
+http://developer.apple.com/macosx/bonjour/index.html
+
+A list of register service types can be found at:
+
+http://www.dns-sd.org/ServiceTypes.html
+
+Requirements: 
+	perl >= 5.6.0
+	Net::DNS >= 0.44
+
+Install the library by running these commands:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+Please report any bugs/suggestions to George Chlipala <george@walnutcs.com>
+
+NOTE FOR Net::Rendezvous USERS
+
+As with the change by Apple, I have updated the module to use the "Bonjour" name.
+I have added support for the Net::Rendezvous classes as subclasses of the cooresponding
+Net::Bonjour classes.  Although, I would suggest updating scripts to reflect the change.
+
+KNOWN BUGS
+
+ - Some special characters in domain names may not be parsed properly via Net::DNS.
+   The pure perl implementation of dn_expand in Net::DNS can misinterpt some characters. 
+   The XS implementation using dn_expand in libc can cause Net::DNS packet decoding
+   subroutines to fail completely.
+
+All files contained in this installation are Copyright (c) 2004
+George Chlipala unless otherwise specified. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under 
+the same terms as Perl itself.
+
+Bonjour (in this context) is a trademark of Apple Computer, Inc.
+
