@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-use Net::Rendezvous;
+use Net::Bonjour;
 
-my $res = new Net::Rendezvous( @ARGV );
+my $res = new Net::Bonjour( @ARGV );
 print $res->domain(), "\n";
 $res->discover;
 

@@ -29,6 +29,7 @@ use strict;
 use Net::Bonjour;
 use Net::Rendezvous::Entry;
 use vars qw($VERSION $AUTOLOAD @ISA);
+our $VERSION = '0.92';
 our @ISA = ('Net::Bonjour');
 
 1;

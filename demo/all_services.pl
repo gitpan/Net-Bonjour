@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-use Net::Rendezvous;
+use Net::Bonjour;
 
-foreach my $res ( Net::Rendezvous->all_services($ARGV[0] || 'local') ) {
+foreach my $res ( Net::Bonjour->all_services($ARGV[0] || 'local') ) {
         printf "-- %s (%s) ---\n", $res->service, $res->protocol;
 	$res->discover;
 	foreach my $entry ( $res->entries ) {

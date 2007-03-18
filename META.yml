@@ -1,12 +1,15 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Net-Bonjour
-version:      0.92
-version_from: lib/Net/Bonjour.pm
-installdirs:  site
-requires:
-    Net::DNS:                      0.44
+--- #YAML:1.0
+name:                Net-Bonjour
+version:             0.95
+abstract:            Module for DNS service discovery (Apple's Bonjour)
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.32
+distribution_type:   module
+requires:     
+    Net::DNS:                      0.5
     Socket:                        1.75
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - George Chlipala <george@walnutcs.com>

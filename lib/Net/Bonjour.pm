@@ -170,7 +170,7 @@ use Net::DNS;
 use Net::Bonjour::Entry;
 use Socket;
 
-$VERSION = '0.92';
+$VERSION = '0.95';
 
 sub new {
 	my $self = {};

@@ -171,7 +171,7 @@ sub fetch {
 
 	my ($name, $protocol, $ipType) = split(/(?<!\\)\./, $self->fqdn,3);
 
-	$self->name($name);
+	$self->{'_name'} = $name;
 	$self->type($protocol, $ipType);
 
 	my $srv   = $res->query($self->fqdn(), 'SRV') || return;
@@ -336,6 +336,18 @@ sub dnsrr {
 
 	$packet->push('additional', @addrs);
 	return $packet;
+}
+
+sub name {
+	my $self = shift;
+	if ( $_[0] ) {
+		$self->{'_name'} = quotemeta($_[0]);
+	} 	
+	my $name = $self->{'_name'};
+	$name =~ s/\\([0-9]{3})/chr($1)/ge;
+	$name =~ s/\\x([0-9A-Fa-f]{2})/chr(hex($1))/ge;
+	$name =~ s/\\(.)/$1/g;
+	return $name;
 }
 
 sub txtdata {

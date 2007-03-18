@@ -15,7 +15,9 @@ WriteMakefile(
 	'NAME' => 'Net::Bonjour',
 	'VERSION_FROM' => 'lib/Net/Bonjour.pm',
 	'DISTNAME' => 'Net-Bonjour',
-	'PREREQ_PM' => { 'Net::DNS' => 0.44, 'Socket' => 1.75 },
+	'PREREQ_PM' => { 'Net::DNS' => 0.50, 'Socket' => 1.75 },
 	'AUTHOR' => 'George Chlipala <george@walnutcs.com>',
+	'ABSTRACT' => "Module for DNS service discovery (Apple's Bonjour)",
+	'LICENSE' => 'perl',
 	'test' => { 'TESTS' => $tests }
 )

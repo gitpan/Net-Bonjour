@@ -1,8 +1,15 @@
+version 0.95: Sat Mar 17 22:11:00 CDT 2007
+	- [George Chlipala] Updated Net::Bonjour::Entry to handle special 
+          characters, e.g. period and space, in DNS names. Updated 
+	  Makefile.PL to include license and abstract information.
+
 version 0.92: Sat Mar 17 19:27:00 CDT 2007
-	- [George Chlipala] Renamed to Net::Bonjour and added legacy support for Net::Rendezvous
+	- [George Chlipala] Renamed to Net::Bonjour and added legacy 
+          support for Net::Rendezvous
 
 version 0.91: Sat Mar 17 17:43:00 CDT 2007
-	- [bmat] Fixed bug #25292: Converting _txtdata to _attr truncates if more than 1 equals sign
+	- [bmat] Fixed bug #25292: Converting _txtdata to _attr truncates 
+	  if more than 1 equals sign
 	- [George Chlipala] other cleanup in Entry.pm
 
 version 0.90: Mon Dec 27 16:20:00 CDT 2004

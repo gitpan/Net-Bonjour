@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
-use Net::Rendezvous;
+use Net::Bonjour;
 use CGI qw(:standard);
 
-print header, start_html('Rendezvous Websites'), h1('Rendezvous Websites'),
+print header, start_html('Bonjour Websites'), h1('Bonjour Websites'),
 	hr;
 
-my $res = new Net::Rendezvous('http');
+my $res = new Net::Bonjour('http');
 $res->discover;
 
 foreach $entry ( $res->entries ) {
