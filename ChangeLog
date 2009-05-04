@@ -1,3 +1,6 @@
+version 0.96: Sat Feb 28 12:26:00 CDT 2008
+	- [Jesse Vincent] Updated MakeFile.PL to allow automated CPAN installation.
+
 version 0.95: Sat Mar 17 22:11:00 CDT 2007
 	- [George Chlipala] Updated Net::Bonjour::Entry to handle special 
           characters, e.g. period and space, in DNS names. Updated 

@@ -1,8 +1,9 @@
 use ExtUtils::MakeMaker;
 
-print "Enable enterprise tests? [y/N]";
-chomp(my $ans = <STDIN>);
+my $ans = prompt("Enable enterprise tests? [y/N]");
+
 my $tests = 't/*.t';
+
 if ( $ans =~ /^y/i ) {
         print "Enterprise tests enabled.\n";
         print "Enterprise test will query HTTP service records from zeroconf.org\n";

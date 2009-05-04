@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Net-Bonjour
-version:             0.95
+version:             0.96
 abstract:            Module for DNS service discovery (Apple's Bonjour)
 license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.32
